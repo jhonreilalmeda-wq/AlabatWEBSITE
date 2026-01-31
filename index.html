@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Interface | Jhoncrise Alabat</title>
+    <style>
+        :root {
+            --bg-dark: #05070a;
+            --system-blue: #00d4ff;
+            --system-purple: #7000ff;
+            --text-gray: #b0b0b0;
+            --glow: 0 0 15px rgba(0, 212, 255, 0.5);
+            --dark-panel: rgba(0, 15, 30, 0.9);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: rgba(5, 7, 10, 0.95);
+            border-bottom: 2px solid var(--system-blue);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: var(--glow);
+        }
+
+        nav a {
+            color: var(--system-blue);
+            text-decoration: none;
+            margin: 5px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: white; text-shadow: var(--glow); }
+
+        /* SECTIONS */
+        section {
+            padding: 120px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--system-blue);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 40px;
+            text-shadow: var(--glow);
+            text-align: center;
+        }
+
+        /* STATUS WINDOW */
+        .status-window {
+            background: var(--dark-panel);
+            border: 2px solid var(--system-blue);
+            padding: 40px;
+            width: 100%;
+            max-width: 850px;
+            box-shadow: var(--glow);
+            position: relative;
+        }
+
+        .status-header {
+            border-bottom: 2px solid var(--system-blue);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border: 4px solid var(--system-blue);
+            object-fit: cover;
+            background: #111;
+        }
+
+        .stats {
+            list-style: none;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            color: var(--system-blue);
+        }
+
+        .stats li { margin: 12px 0; }
+
+        /* QUEST BOX */
+        .quest-box {
+            background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 100%);
+            border: 1px solid var(--system-purple);
+            padding: 40px;
+            max-width: 850px;
+            line-height: 1.8;
+            box-shadow: 0 0 20px rgba(112, 0, 255, 0.3);
+        }
+
+        /* GRID CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 25px;
+            border-radius: 4px;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            border-color: var(--system-blue);
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .hobby-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border: 1px solid var(--system-blue);
+            margin-bottom: 15px;
+        }
+
+        .fb-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: transparent;
+            color: var(--system-blue);
+            border: 2px solid var(--system-blue);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+            box-shadow: var(--glow);
+        }
+
+        .fb-button:hover {
+            background: var(--system-blue);
+            color: black;
+            box-shadow: 0 0 25px var(--system-blue);
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #020205;
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--system-blue);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">[01 HOME]</a>
+        <a href="#status">[02 STATUS]</a>
+        <a href="#quest">[03 QUEST]</a>
+        <a href="#ict">[04 TRENDS]</a>
+        <a href="#issues">[05 ISSUES]</a>
+        <a href="#hobbies">[06 HOBBIES]</a>
+        <a href="#travel">[07 TRAVEL]</a>
+        <a href="#skills">[08 SKILLS]</a>
+        <a href="#contact">[09 CONTACT]</a>
+    </nav>
+
+    <section id="home" style="justify-content: center; background: radial-gradient(circle, #1a1a2e 0%, #05070a 100%);">
+        <h1 style="font-size: 4rem; margin: 0; text-shadow: var(--glow);">SYSTEM START</h1>
+        <p style="letter-spacing: 8px; color: var(--system-blue); text-align: center;">PLAYER: JHONCRISE ALABAT<br><span style="font-size: 0.8rem; letter-spacing: 2px;">INITIALIZING ICT MONARCH PROTOCOL...</span></p>
+    </section>
+
+    <section id="status">
+        <h2>Hunter Status</h2>
+        <div class="status-window">
+            <div class="status-header">
+                <h1 style="margin:0; font-size: 2.5rem;">JHONCRISE ALABAT</h1>
+                <span style="color: #ffcc00; font-weight: bold; font-size: 1.3rem;">RANK: S-RANK [TECH MONARCH]</span>
+            </div>
+            <div class="profile-container">
+                <img src="alabat.jfif" alt="Jhoncrise Alabat" class="profile-img">
+                <ul class="stats">
+                    <li>LEVEL: 99</li>
+                    <li>JOB: ICT SPECIALIST</li>
+                    <li>STAMINA: 88 / 88</li>
+                    <li>INTEL: 100 / 100</li>
+                    <li>MANA: ∞</li>
+                </ul>
+            </div>
+            <div style="margin-top: 30px; border-top: 1px solid rgba(0, 212, 255, 0.3); padding-top: 20px;">
+                <h3 style="color: var(--system-blue);">PLAYER BIOGRAPHY</h3>
+                <p style="color: var(--text-gray); line-height: 1.8;">
+                    My name is <strong>Jhoncrise Alabat</strong>, and I am a dedicated student currently mastering the complex world of Empowerment Technology. In this digital era, I view every line of code and every tech trend as a dungeon that needs to be cleared. My "awakening" began when I realized that technology is the most powerful tool for change in the Philippines. As an S-Rank Tech Monarch, I focus on understanding how hardware and software work together to empower individuals and communities. My goal is to maintain a perfect balance between technical skill and creative vision, ensuring that I am always at the top of the "Leaderboard" in my academic and professional journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quest">
+        <h2>Main Quest: Article</h2>
+        <div class="quest-box">
+            <h3 style="color: #ff00ff; text-align: center;">[Rank S Quest: The Digital Awakening of the Philippines]</h3>
+            <p>In the year 2026, the Philippines has transformed into a high-tech dungeon where only those with digital literacy can survive and thrive. Technology is no longer just a luxury; it has become the "Mana" that fuels our daily lives, from how we order food to how we receive our education. As a student of Empowerment Technology, I have observed that our country is undergoing a massive "Level-Up." </p>
+            <p>The expansion of AI and 5G networks across the archipelago is creating new opportunities, but it also brings new "Monsters" like cyber-threats and digital misinformation. My unique perspective is that we must not only focus on the hardware but also on the "Software" of the human mind—education. By mastering ICT, we empower ourselves to become the masters of our own destiny. This quest for knowledge is unending, and as I clear each floor of this academic challenge, I am constantly reminded that the ultimate goal is to use technology to uplift the lives of every Filipino in this digital age.</p>
+        </div>
+    </section>
+
+    <section id="ict">
+        <h2>Global System Trends</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Hyper-Automation</h3>
+                <p>The system is evolving. AI and Machine Learning are now taking over repetitive tasks, allowing humans to focus on high-level strategy and creativity. In 2026, this is the key to unlocking maximum industrial productivity.</p>
+            </div>
+            <div class="card">
+                <h3>Quantum Networking</h3>
+                <p>Data transmission has reached a new rank. Quantum networks ensure that information is sent with zero latency and absolute security, making traditional hacking methods obsolete in high-security zones.</p>
+            </div>
+            <div class="card">
+                <h3>Symbiotic Web (Web 4.0)</h3>
+                <p>The boundary between the physical and digital worlds is fading. Web 4.0 allows for seamless interaction between the human brain and the digital system, creating a truly immersive "System" experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="issues">
+        <h2>Regional Anomaly Reports</h2>
+        <div class="quest-box" style="border-color: #ff4444; background: rgba(50, 0, 0, 0.2);">
+            <p style="color: #ff4444; font-weight: bold; font-size: 1.2rem;">[WARNING: NATIONAL SECURITY ALERT]</p>
+            <p>The Philippines is currently facing a high-level threat: <strong>The Cyber-Infrastructure Gap</strong>. While cities are leveling up rapidly, many rural areas are still stuck in the "Lower Tiers" of connectivity. This digital poverty prevents students and workers in the provinces from accessing the same "Loot" (opportunities) as those in the city. Furthermore, the rise of sophisticated phishing "Dungeons" targets our citizens' data. As an ICT student, I believe the government and private sector must party up to build a stronger, more inclusive firewall for the entire nation.</p>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2>Side Quests (Hobbies)</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="solo.webp" class="hobby-img" alt="Anime">
+                <h3>Anime Mastery</h3>
+                <p>I spend my downtime analyzing complex Japanese animation. Anime isn't just entertainment; it's a source of inspiration for visual storytelling and character discipline. I admire the "Never Give Up" attitude found in Shonen series.</p>
+            </div>
+            <div class="card">
+                <img src="fam.jfif" class="hobby-img" alt="Friends">
+                <h3>Guild Gathering (Friends)</h3>
+                <p>No Monarch can rule alone. I value spending quality time with my "Guild" (friends). Whether we are out exploring the city or just hanging out, these social interactions recharge my mana and keep me grounded in reality.</p>
+            </div>
+            <div class="card">
+                <img src="game.jpg" class="hobby-img" alt="Gaming">
+                <h3>The Gaming Arena</h3>
+                <p>I am a dedicated gamer. I enjoy testing my mechanical skills and strategic thinking in competitive environments. Gaming allows me to practice quick decision-making under pressure, a skill that translates directly to my ICT work.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="travel">
+        <h2>Explored Gates (Travel)</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>Metro Manila Gate</h4>
+                <p>The central hub of the Philippine System. A place of endless energy and high-speed data flow. I enjoy the fast-paced life and the tech-filled environment of the city.</p>
+            </div>
+            <div class="card">
+                <h4>Cebu High-Rank Gate</h4>
+                <p>The "Queen City of the South." It offers a perfect blend of modern infrastructure and beautiful island scenery, a perfect place for a Monarch to find balance.</p>
+            </div>
+            <div class="card">
+                <h4>Baguio Recovery Zone</h4>
+                <p>The Summer Capital. When the heat of the digital world gets too intense, the cool mountains of Baguio provide the perfect environment for "HP Recovery" and reflection.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Active Passive Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color:var(--system-blue)">Discipline</h3>
+                <p>The foundation of my power. I maintain a strict schedule for my studies and projects, ensuring that every task is completed with 100% efficiency. Without discipline, talent is just wasted mana.</p>
+            </div>
+            <div class="card">
+                <h3 style="color:var(--system-blue)">Teamwork</h3>
+                <p>I excel in collaborative environments. I understand that a balanced party is the only way to clear S-Rank challenges. I am always ready to support my teammates to ensure our collective success.</p>
+            </div>
+            <div class="card">
+                <h3 style="color:var(--system-blue)">Communication</h3>
+                <p>I possess the ability to transmit complex ideas in a way that anyone can understand. Whether it's a technical report or a casual chat, I ensure my message is received with absolute clarity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Connect With The Monarch</h2>
+        <div class="status-window" style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p>The system is always open for new alliances and professional inquiries. If you wish to join forces or discuss future technology projects, feel free to transmit a message through the coordinates below.</p>
+            <p style="font-size: 1.5rem; color: var(--system-blue); font-family: monospace;">JHONCRISE.ALABAT@EMAIL.COM</p>
+            
+            <a href="https://www.facebook.com/profile.php?id=61584833878265" target="_blank" class="fb-button">[ TRANSMIT VIA FACEBOOK ]</a>
+            
+            <p style="color: var(--system-purple); font-weight: bold; letter-spacing: 2px; margin-top: 20px;">[SYSTEM STATUS: ONLINE]</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>SYSTEM FINALIZED | JHONCRISE ALABAT | MIDTERM PERFORMANCE TASK © 2026</p>
+    </footer>
+
+</body>
+</html>
